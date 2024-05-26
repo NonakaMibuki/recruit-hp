@@ -231,13 +231,18 @@ nav {
     color: #000;
 }
 
+.site-menu ul li a:hover {
+    color: #D92B44;
+}
+
 .entry-button {
-    padding: 1.4rem 1.2rem;
     background-color: #000;
     text-align: center;
 }
 
 .entry-button a {
+    display: block;
+    padding: 1.4rem 1.2rem;
     color: #fff;
     text-decoration: none;
     font-family: Montserrat, sans-serif;
@@ -245,6 +250,36 @@ nav {
     font-size: 0.9rem;
 }
 
+#site__menu--sub {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: end;
+    box-sizing: border-box;
+}
+
+#site__menu--sub div.menu-title {
+    top: 33%;
+    left: 65px;
+    width: 4.2rem;
+}
+
+#site__menu--sub ul {
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+}
+
+#site__menu--sub ul li {
+    padding: 11.5px;
+    font-size: 0.65rem;
+}
+
+#site__menu--sub div.entry-button {
+    padding: 2.2rem 2rem;
+}
 
 
 /*========================
@@ -279,6 +314,19 @@ nav {
     height: 40px;
     background-color: #d92b44;
     z-index: 75;
+}
+
+.type-small {
+    position: fixed;
+    top: 50%;
+    writing-mode: vertical-rl;
+    left: 13px;
+}
+
+.type-small p {
+    color: #fff;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
 }
 
 .fv h2 {
@@ -481,8 +529,8 @@ nav {
     background-color: #FFEDEF;
     border-radius: 30px;
     padding-right: 40px;
-    max-width: 30rem; 
-    overflow: hidden; 
+    max-width: 30rem;
+    overflow: hidden;
 }
 
 .home-news__wrap h4 {
@@ -1014,7 +1062,7 @@ img.about__textarea--bg {
     gap: 2.5rem;
 }
 
-.new-graduate__box {
+a.recruit__new-graduate {
     height: 14rem;
     width: 100%;
     text-align: center;
@@ -1023,7 +1071,7 @@ img.about__textarea--bg {
     transition: background 1s ease, color 1s ease;
 }
 
-.new-graduate__box::after {
+a.recruit__new-graduate::after {
     position: absolute;
     border: 1px solid #D92B44;
     content: "";
@@ -1033,7 +1081,7 @@ img.about__textarea--bg {
     right: 8px;
 }
 
-.new-graduate__box a {
+a.recruit__new-graduate .new-graduate__box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1045,7 +1093,7 @@ img.about__textarea--bg {
 }
 
 
-.new-graduate__box:hover {
+a.recruit__new-graduate:hover {
     background: url(./img/bnr-requirements01.jpg);
     background-size: cover;
     background-position: center;
@@ -1053,19 +1101,20 @@ img.about__textarea--bg {
     color: #fff;
 }
 
-.new-graduate__box:hover a {
+a.recruit__new-graduate:hover h3 {
+    border-bottom: 2px solid #fff;
     color: #fff;
 }
 
-.new-graduate__box:hover h3 {
-    border-bottom: 2px solid #fff;
+.recruit__new-graduate:hover span {
+    color: #fff;
 }
 
-.new-graduate__box:hover.new-graduate__box::after {
+a.recruit__new-graduate:hover.recruit__new-graduate::after {
     border: 1px solid #fff;
 }
 
-.new-graduate__box a h3 {
+a.recruit__new-graduate h3 {
     font-size: 2.5rem;
     border-bottom: 2px solid #333;
     padding-bottom: 8px;
@@ -1074,13 +1123,13 @@ img.about__textarea--bg {
 
 }
 
-.new-graduate__box a span {
+a.recruit__new-graduate span {
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     letter-spacing: 0.1em;
 }
 
-.mid-career__box {
+.recruit__mid-career {
     height: 14rem;
     width: 100%;
     text-align: center;
@@ -1089,7 +1138,7 @@ img.about__textarea--bg {
     transition: background 1s ease, color 1s ease;
 }
 
-.mid-career__box::after {
+.recruit__mid-career::after {
     position: absolute;
     border: 1px solid #0039A4;
     content: "";
@@ -1099,7 +1148,7 @@ img.about__textarea--bg {
     right: 8px;
 }
 
-.mid-career__box a {
+.mid-career__box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1110,7 +1159,7 @@ img.about__textarea--bg {
     transition: color 0.3s ease;
 }
 
-.mid-career__box:hover {
+.recruit__mid-career:hover {
     background: url(./img/bnr-requirements02.jpg);
     background-size: cover;
     background-position: center;
@@ -1118,19 +1167,20 @@ img.about__textarea--bg {
     color: #fff;
 }
 
-.mid-career__box:hover a {
+.recruit__mid-career:hover h3 {
+    border-bottom: 2px solid #fff;
     color: #fff;
 }
 
-.mid-career__box:hover h3 {
-    border-bottom: 2px solid #fff;
+.recruit__mid-career:hover span {
+    color: #fff;
 }
 
-.mid-career__box:hover.mid-career__box::after {
+.recruit__mid-career:hover.recruit__mid-career::after {
     border: 1px solid #fff;
 }
 
-.mid-career__box a h3 {
+.mid-career__box h3 {
     font-size: 2.5rem;
     border-bottom: 2px solid #333;
     padding-bottom: 8px;
@@ -1139,7 +1189,7 @@ img.about__textarea--bg {
 
 }
 
-.mid-career__box a span {
+.mid-career__box span {
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -1391,4 +1441,746 @@ footer {
     text-decoration: none;
     font-style: italic;
 
+}
+
+
+/*===========================
+
+インタビュー一覧ページ
+
+============================*/
+
+h1.sub-page__logo {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 40px;
+    z-index: 999;
+    border-radius: 0 0 20px 20px;
+}
+
+a.sub-page {
+    flex-direction: column;
+    padding: 26px 50px;
+}
+
+a.sub-page img {
+    margin-bottom: 10px;
+}
+
+.interview__container {
+    margin: 0 40px 190px;
+    padding-top: 45px;
+}
+
+.interview__container--top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interview__container--top ul {
+    display: flex;
+    align-items: center;
+}
+
+.interview__container--top ul li {
+    font-size: 0.5rem;
+    padding-top: 50px;
+    padding-right: 10px;
+    color: #fff;
+    letter-spacing: 0.2em;
+}
+
+.interview__container--top ul li a {
+    font-size: 0.65rem;
+    color: #fff;
+}
+
+.interview__container--top h2 {
+    font-size: 7.3rem;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    margin-bottom: -0.6rem;
+}
+
+.interview__container--main {
+    display: flex;
+}
+
+.interview__container--main ul {
+    width: 45%;
+    height: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.slick-vertical .slick-slide,
+.slick-slide img {
+    border: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+.interview__container--main ul li img {
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.interview__container--item {
+    background-color: #FCF9F4;
+    width: 55%;
+}
+
+.item__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.8rem;
+    gap: 2.5rem;
+    padding: 40px 50px;
+}
+
+.item__inner article {
+    padding: 1.5rem 2rem 0.5rem 2rem;
+    background-color: #fff;
+}
+
+.item__inner article a {
+    text-decoration: none;
+}
+
+.interview__img {
+    text-align: center;
+    position: relative;
+
+}
+
+.interview__img img {
+    width: 15rem;
+    height: 19rem;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.interview__img p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #D92B44;
+    color: #fff;
+    font-size: 0.65rem;
+    letter-spacing: 0.17em;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.interview__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.interview__text p {
+    color: #333;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 12px 0;
+    line-height: 1.5;
+}
+
+.interview__text p.interview__text--name {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+
+/*===========================
+
+1人1人のインタビュー記事
+
+============================*/
+
+.interview01__inner {
+    margin: 60px 77px;
+}
+
+.interview01__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #D92B44;
+}
+
+.interview01__title h3 {
+    color: #D92B44;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.interview01__title h3 span {
+    font-size: 3.5rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.interview01__title p {
+    display: flex;
+    align-items: end;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.interview01__title p span {
+    font-size: 2rem;
+    margin-left: 8px;
+}
+
+.interview01__inner h4 {
+    font-size: 1.6rem;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    margin: 50px 0;
+}
+
+.interview01__inner h4 span {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+    line-height: 2.3;
+}
+
+.interview__detail {
+    margin-bottom: 60px;
+}
+
+.interview__detail p.small-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: #D92B44;
+    display: flex;
+    align-items: center;
+}
+
+.interview__detail p.small-subtitle::before {
+    content: "";
+    height: 1px;
+    margin-right: -7px;
+    background-color: #D92B44;
+    width: 40px;
+}
+
+.interview__detail h5 {
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    padding-left: 10px;
+    border-left: 8px double #D92B44;
+}
+
+.interview__detail p {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.interview01__inner img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 60px;
+}
+
+.message-container {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.message-container h6 {
+    max-width: 350px;
+    color: #D92B44;
+    padding: 5px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.message-container h6 img {
+    width: 2rem;
+    margin: 0 15px 0 0;
+}
+
+.message-container p {
+    margin-top: -20px;
+    background-color: #FFEDEF;
+    color: #7F0C0A;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 50px 35px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.staff-schedule {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #D92B44;
+    padding: 60px 12px;
+    border-radius: 30px;
+    margin-bottom: 60px;
+
+}
+
+.staff-schedule h6 {
+    color: #D92B44;
+    padding: 5px 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background-color: #FFEDEF;
+    border-radius: 15px;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.staff-schedule h6 img {
+    width: 1.5rem;
+    margin: 0 15px 0 0;
+}
+
+.staff-schedule span.timeline {
+    top: 6rem;
+    bottom: 7rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.1rem;
+    background-color: #D92B44;
+    z-index: 2;
+}
+
+.schedule-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+.schedule-detail li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    position: relative;
+    border: 2px solid #d92b44;
+    border-radius: 5px;
+    background-color: #ffedef;
+    padding: 1.5rem;
+    color: #000;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.schedule-detail li::before, .schedule-detail li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    background-color: #D92B44;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.schedule-detail li::after {
+    width: 3.5rem;
+    height: 2px;
+}
+
+.schedule-detail li:nth-child(odd) {
+    margin-left: 39rem;
+}
+
+.schedule-detail li:nth-child(odd)::before, .schedule-detail li:nth-child(odd)::after {
+    left: -3.5rem;
+}
+
+.schedule-detail li:nth-child(even)::before, .schedule-detail li:nth-child(even)::after {
+    right: -3.5rem;
+}
+
+.schedule-detail li span {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    text-align: center;
+    width: 3rem;
+    padding: 3px 0;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #D92B44;
+    color: #D92B44;
+    font-size: 0.65rem;
+    font-weight: 500;
+}
+
+.next-list__button {
+    text-align: center;
+}
+
+.next-list__button a {
+    width: fit-content;
+    min-width: min(17.5rem, 100%);
+    background-color: #FCF9F4;
+    text-decoration: none;
+    color: #D92B44;
+    border: 1px solid #D92B44;
+    padding: 16px 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 8px;
+    letter-spacing: 0.05em;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.next-list__button a:hover {
+    background-color: #FFEDEF;
+}
+
+.button_decoration::before, .button_decoration::after {
+    content: "";
+    display: inline-block;
+    position: static;
+    margin: 0 20px;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: #D92B44;
+    border-radius: 50%;
+}
+
+
+/*===========================
+
+新卒採用ページ
+
+===========================*/
+
+.require-page {
+    background-color: #FCF9F4;
+    width: 55%;
+}
+
+.require-page__inner {
+    margin: 60px 77px;
+}
+
+.require-page__inner h3 {
+    font-size: 1.7rem;
+    letter-spacing: 0.2em;
+}
+
+.require-page__inner h3 span {
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    margin-left: 15px;
+}
+
+.new-graduate__list {
+    margin: 80px 0;
+    background-color: #fff;
+    border: 1.2px solid #FFA0B6;
+    border-radius: 20px;
+    position: relative;
+    letter-spacing: 0.2em;
+}
+
+.new-graduate__list h4 {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFEDEF;
+    color: #D92B44;
+    padding: 15px 100px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.new-graduate__list table {
+    margin: 4rem 3.5rem;
+}
+
+.new-graduate__list table tbody tr {
+    width: 100%;
+}
+
+.new-graduate__list table tbody tr th {
+    width: 30%;
+    background-color: #FFEDEF;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    vertical-align: middle;
+    padding: 0.8em 1.5em;
+    border: 1px solid #FFA0B6;
+}
+
+.new-graduate__list table tbody tr td {
+    width: 70%;
+    background-color: #fff;
+    vertical-align: middle;
+    padding: 0.85em 1.5em;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    border: 1px solid #FFA0B6;
+}
+
+.new-graduate__list table tbody tr td div h6 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding:0 0 0 15px;
+    margin-bottom: 20px;
+    border-left: 6px double #D92B44;
+}
+
+.new-graduate__list table tbody tr td div p {
+    margin-bottom: 20px;
+}
+
+.entry-flow__container {
+    margin: 80px 0;
+    background-color: #fff;
+    border: 1.2px solid #FFA0B6;
+    border-radius: 20px;
+    position: relative;
+    letter-spacing: 0.2em;
+}
+
+.entry-flow__container h4 {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFEDEF;
+    color: #D92B44;
+    width: 30%;
+    text-align: center;
+    padding: 1rem 5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+.entry-flow {
+    position: relative;
+}
+
+.entry-timeline {
+    position: absolute;
+    top: 8rem;
+    bottom: 4rem;
+    left: 7.125rem;
+    width: 0.4rem;
+    background-color: #ffedef;
+    border-radius: 30px;
+}
+
+.entry-flow ul {
+    width: 100%;
+    padding: 6.5rem 2rem 3rem;
+    
+}
+
+.entry-flow ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.entry-flow ul li span {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    background-color: #D92B44;
+    color: #fff;
+    border-radius: 30px;
+    letter-spacing: 0.1em;
+}
+
+.entry-flow ul li .flow-text {
+    position: relative;
+    width: 50%;
+    padding: 15px;
+    margin-left: 15%;
+    background-color: #fff;
+    border: 1px solid #D92B44;
+    border-radius: 5px;
+}
+
+.entry-flow ul li .flow-text .flow-text__small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: 15px;
+}
+
+.entry-flow ul li div.flow-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4.7rem;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #d92b44;
+    border-radius: 50%;
+}
+
+.entry-flow ul li div.flow-text::after {
+    left: -4.5rem;
+    width: 4.5rem;
+    height: 1px;
+    border-bottom: 1px solid #d92b44;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.entry-flow ul li div p {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.entry-button__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.entry-site__button {
+    text-align: center;
+}
+
+.entry-site__button a {
+    width: fit-content;
+    min-width: min(17.5rem, 100%);
+    background-color: #fff;
+    text-decoration: none;
+    color: #D92B44;
+    border: 1px solid #D92B44;
+    padding: 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.entry-site__button a:hover {
+    background-color: #FFEDEF;
+}
+
+.entry-top {
+    text-align: center;
+    padding: 8px 15px;
+    background-color: #D92B44;
+    margin: 100px auto 0;
+    width: 20%;
+    border-radius: 3px;
+}
+
+.entry-top a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+
+/*===========================
+
+募集要項ページ
+
+===========================*/
+
+.require-page__inner ul.recruitment-list__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.require-page__inner ul.recruitment-list__box li {
+    width: 45%;
+    margin: 0 1rem;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.require-page__inner ul.recruitment-list__box li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    line-height: 2.5;
+}
+
+.require-page__inner ul.recruitment-list__box li a:hover {
+    background-color: #FDF5F6;
+    transition: all 0.5s;
+}
+
+.require-page__inner ul li a img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.require-page__inner ul li a div.recruit__container--item {
+    padding: 15px 20px;
+}
+
+.require-page__inner ul li a div.recruit__container--item span {
+    font-size: 0.7rem;
+    font-weight: 400;
+    background-color: #D92B44;
+    padding: 4px 10px;
+    color: #fff;
+    border-radius: 15px;
 }

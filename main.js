@@ -40,6 +40,16 @@ $(document).ready(function(){
       });
     }
   });
+
+//インタビュー一覧の写真スライダー
+$('.slick-img').slick({
+    vertical: true,     
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 1500,
+    dots: false,
+    arrows: false,
+})
   
 
 // TOPへ戻る
