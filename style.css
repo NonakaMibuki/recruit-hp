@@ -33,6 +33,13 @@ body {
     font-family: "M PLUS 1", sans-serif;
 }
 
+@media (max-width:768px) {
+    body {
+        font-size: 14px;
+    }
+
+}
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
@@ -153,6 +160,13 @@ input, select {
     font-weight: 600;
     padding-right: 20px;
 }
+
+@media (max-width:768px) {
+    .top__loopbar {
+        display: none;
+    }
+}
+
 
 h1 {
     position: fixed;
@@ -303,6 +317,17 @@ nav {
 
 .background__red {
     background-color: #D92B44;
+}
+
+@media (max-width:768px) {
+
+    .background__red {
+        padding-bottom: 20px;
+    }
+
+    .background__white--area {
+        margin: 0 20px;
+    }
 }
 
 .background__red::after {
@@ -1026,6 +1051,7 @@ img.about__textarea--bg {
 }
 
 .recruit__inner h2 {
+    width: 100%;
     text-align: center;
     font-size: 1.8rem;
     letter-spacing: 0.2em;
@@ -1245,6 +1271,10 @@ a.recruit__new-graduate span {
     font-size: 3.5rem;
 }
 
+.recruit-contact__entry h2 br.sp-only {
+    display: none;
+}
+
 .recruit-contact__entry h2 span:first-child {
     font-size: 3rem;
 }
@@ -1336,6 +1366,7 @@ a.recruit__new-graduate span {
 .recruit-site__box ul.contact-middle li a img {
     width: 2rem;
     float: left;
+    display: block;
 }
 
 .recruit-site__box ul.contact-middle li a p {
@@ -1361,6 +1392,132 @@ a.recruit__new-graduate span {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+@media (max-width:768px) {
+    .recruit {
+        padding-top: 0px;
+    }
+
+    .recruit__inner {
+        margin: 0 20px;
+        padding: 40px 20px 20px;
+    }
+
+    .recruit__inner h2 {
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+
+    .recruit__inner h2::before {
+        width: 25%;
+    }
+
+    .recruit__inner h2::after {
+        width: 25%;
+    }
+
+    .recruit__box {
+        grid-template-columns: none;
+        gap: 1.1rem;
+    }
+
+    a.recruit__new-graduate ,.recruit__mid-career{
+        height: 9rem;
+    }
+
+    a.recruit__new-graduate h3 ,a.recruit__mid-career h3 {
+        font-size: 1.7rem;
+        margin-bottom: 8px;
+    }
+
+    a.recruit__new-graduate span ,.mid-career__box span {
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+
+    .recruit-contact__inner {
+        margin: 0 20px;
+        margin-bottom: -80px;
+        padding-bottom: 60px;
+    }
+
+    .recruit-contact__entry ul {
+        margin: 50px 0;
+    }
+
+    .recruit-contact__entry ul li img {
+        width: 30rem;
+    }
+
+    .recruit-contact__entry h2 {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 0.17em;
+        line-height: 1.3;
+    }
+
+    .recruit-contact__entry h2 span {
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: 0.17em;
+    }
+
+    .recruit-contact__entry h2 br.sp-only {
+        display: block;
+    }
+
+    .recruit-contact__entry h2 span:first-child {
+        font-size: 1.7rem;
+    }
+
+    .recruit-contact__entry h2 span.title--big {
+        font-size: 2.8rem;
+    }
+
+    .recruit-site__container {
+        margin: 0 20px;
+    }
+
+    .recruit-site__box ul h3 {
+        font-size: 1.2rem;
+        padding: 20px 0;
+    }
+
+    .recruit-site__box {
+        display: block;
+    }
+
+    .recruit-site__box ul {
+        margin-bottom: 15px;
+    }
+
+    .recruit-site__box li a {
+        height: 6.5rem;
+    }
+
+    .recruit-site__box ul.contact-middle li a img {
+        display: none;
+    }
+
+    .recruit-site__box ul.contact-middle li a p {
+        word-break: break-all;
+    }
+
+    .recruit-site__box ul.contact-middle li a p.tel-big {
+        font-size: 0.95rem;
+        line-height: 1.2;
+    }
+
+    .recruit-site__box ul.contact-middle li a p span {
+        font-size: 0.7rem;
+    }
+
+    .recruit-contact__img img {
+        width: 90%;
+    }
 }
 
 footer {
@@ -1440,6 +1597,34 @@ footer {
     font-weight: 200;
     text-decoration: none;
     font-style: italic;
+}
+
+@media (max-width:768px) {
+
+    footer {
+        height: 10rem;
+    }
+
+    .footer__container ul {
+        display: none;
+    }
+
+    .top-button {
+        display: none;
+    }
+
+    #site__menu--sub {
+        display: none;
+    }
+
+    .background__red::after {
+        display: none;
+    }
+
+    .footer-info {
+        padding: 0 20px;
+        text-align: left;
+    }
 
 }
 
@@ -1466,6 +1651,30 @@ a.sub-page {
 
 a.sub-page img {
     margin-bottom: 10px;
+}
+
+@media (max-width:768px) {
+    h1.sub-page__logo {
+        position: fixed;
+        top: 0;
+        left: 20px;
+    }
+
+    a.sub-page {
+        padding: 15px;
+        text-align: left;
+
+    }
+
+    a.sub-page img {
+        width: 9.5rem;
+    }
+
+    a.sub-page span {
+        font-size: 0.75rem;
+        padding-left: 0;
+    }
+
 }
 
 .interview__container {
@@ -1581,6 +1790,10 @@ a.sub-page img {
     border-radius: 8px;
 }
 
+.interview__img p span {
+    display: none;
+}
+
 .interview__text {
     display: flex;
     justify-content: space-between;
@@ -1599,6 +1812,75 @@ a.sub-page img {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 0.1em;
+}
+
+@media (max-width:768px) {
+    .interview__container {
+        margin: 0 20px 180px;
+    }
+
+    .interview__container--top {
+        display: block;
+    }
+
+    .interview__container--top ul {
+        justify-content: flex-end;
+        margin-bottom: -3.9rem;
+        padding-top: 40px;
+    }
+
+    .interview__container--top ul li {
+        padding-right: 0;
+        padding-left: 10px;
+    }
+
+
+    .interview__container--top h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        text-align: right;
+        margin-bottom: 2.3rem;
+    }
+
+    .interview__container--main {
+        display: block;
+    }
+
+    .interview__container--main ul {
+        display: none;
+    }
+
+    .interview__container--item {
+        width: 100%;
+    }
+
+    .item__inner {
+        display: block;
+        padding: 40px 18px;
+    }
+
+    .item__inner article {
+        margin-bottom: 25px;
+        padding: 1.5rem 1.5rem 0.5rem;
+    }
+
+    .interview__img img {
+        width: 100%;
+        height: 21rem;
+    }
+
+    .interview__img p {
+        width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+        font-size: 0.75rem;
+    }
+
+    .interview__img p span {
+        display: block;
+        float: right;
+    }
+
 }
 
 
@@ -2184,3 +2466,4 @@ a.sub-page img {
     color: #fff;
     border-radius: 15px;
 }
+
