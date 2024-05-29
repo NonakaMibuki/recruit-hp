@@ -1846,7 +1846,7 @@ a.sub-page img {
         display: block;
     }
 
-    .interview__container--main ul {
+    .interview__container--main ul.slick-img {
         display: none;
     }
 
@@ -2065,7 +2065,6 @@ a.sub-page img {
     transform: translateX(-50%);
     width: 0.1rem;
     background-color: #D92B44;
-    z-index: 2;
 }
 
 .schedule-detail {
@@ -2171,6 +2170,104 @@ a.sub-page img {
     height: 0.3rem;
     background-color: #D92B44;
     border-radius: 50%;
+}
+
+@media (max-width:768px) {
+    .interview__container--main {
+        display: block;
+    }
+
+     .interview__container--main ul.slick-img__sub {
+        display: block;
+        width: 100%;
+        position: static;
+        visibility: hidden;
+     }
+
+     .interview__container--main ul.slick-img__sub.slick-initialized {
+        visibility: visible;
+     }
+
+     .interview__container--main ul li img {
+        height: 100%;
+     }
+
+     .interview01__inner {
+        margin: 0 20px 40px;
+        padding-bottom: 50px;
+     }
+
+     .interview01__title {
+        display: block;
+        padding: 30px 0 25px;
+     }
+
+     .interview01__title h3 {
+        font-size: 1.2rem;
+     }
+
+     .interview01__title h3 span {
+        font-size: 2.1rem;
+     }
+
+     .interview01__title p {
+        line-height: 1.5;
+        justify-content: space-between;
+     }
+
+     .interview01__inner h4 {
+        font-size: 1.15rem;
+        margin: 35px 0;
+        letter-spacing: 0;
+     }
+
+     .interview__detail p.small-subtitle::before {
+        display: none;
+     }
+
+     .message-container p {
+        padding: 35px 20px 25px;
+     }
+
+     .schedule-detail {
+        display: block;
+        flex-direction: row;
+        padding: 20px 20px 0;
+     }
+
+     .schedule-detail li {
+        display: block;
+        min-width: 12rem;
+        max-width: 14rem;
+        text-align: center;
+        z-index: 5;
+        margin-bottom: 20px;
+     }
+
+     .schedule-detail li::before, .schedule-detail li::after {
+        display: none;
+     }
+
+     .schedule-detail li:nth-child(odd) {
+        margin-left: 0;
+     }
+
+     .schedule-detail li span {
+        width: 4rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+     }
+
+     .next-list__button a {
+        padding: 10px 15px;
+        background-color: #fff;
+        font-size: 0.75rem;
+     }
+
+     .button_decoration::before, .button_decoration::after {
+        display: none;
+     }
+
 }
 
 
