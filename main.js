@@ -47,6 +47,7 @@ $('.slick-img').slick({
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 1500,
+    centerMode: false,
     dots: false,
     arrows: false,
 })
