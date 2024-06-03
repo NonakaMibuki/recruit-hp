@@ -22,6 +22,18 @@ $(function () {
   });
 });
 
+  //ハンバーガーメニュー
+  $(".drawer_toggle-lines").click(function () {
+    $(this).toggleClass("active");
+    $("#global__nav").toggleClass("panelactive");
+  });
+
+  //ハンバーガーメニュー　同ページのアンカーに飛んでも表示消す
+  $("#global__nav ul li a").click(function () {
+    $(".drawer_toggle-lines").removeClass("active");
+    $("#global__nav").removeClass("panelactive");
+  });
+
 
 //お知らせ記事
 $(document).ready(function(){
