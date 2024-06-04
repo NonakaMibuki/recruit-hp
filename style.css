@@ -218,6 +218,10 @@ nav {
     z-index: 111;
 }
 
+nav#global__nav--sub {
+    display: none;
+}
+
 .menu-title {
     position: absolute;
     top: -45px;
@@ -416,7 +420,7 @@ nav p {
         width: 85%;
     }
 
-    nav#global__nav {
+    nav#global__nav, nav#global__nav--sub {
         display: block;
         position: fixed;
         top: -100%;
@@ -430,24 +434,24 @@ nav p {
         transition: opacity .3s linear;
     }
 
-    nav#global__nav ul {
+    nav#global__nav ul, nav#global__nav--sub ul {
         display: block;
         padding: 0;
         position: absolute;
-        top: 25%;
+        top: 30%;
         left: 50%;
         width: 85%;
         border: 1px solid #333;
         transform: translate(-50%, -50%);
     }
 
-    nav#global__nav ul li {
+    nav#global__nav ul li, nav#global__nav--sub ul li {
         border: 1px solid #333;
         position: relative;
     }
 
 
-    nav#global__nav ul li a {
+    nav#global__nav ul li a, nav#global__nav--sub ul li a {
         display: block;
         padding: 10px 0 10px 18px;
         color: #333;
@@ -457,7 +461,11 @@ nav p {
         text-decoration: none;
     }
 
-    nav#global__nav ul li a::before {
+    nav#global__nav--sub ul li a {
+        padding: 15px 18px;
+    }
+
+    nav#global__nav ul li a::before, nav#global__nav--sub ul li a::before {
         content: "";
         position: absolute;
         top: 0;
@@ -475,7 +483,11 @@ nav p {
         display: none;
     }
 
-    nav#global__nav.panelactive {
+    #global__nav--sub ul li a br.pc-only {
+        display: none;
+    }
+
+    nav#global__nav.panelactive, nav#global__nav--sub.panelactive {
         top: 20px;
         left: 20px;
         position: fixed;
@@ -517,7 +529,7 @@ nav p {
 
     nav p {
         display: block;
-        margin-top: 23rem;
+        margin-top: 22rem;
         letter-spacing: 0.1em;
         font-weight: 500;
         text-align: center;
@@ -2672,14 +2684,15 @@ a.sub-page img {
 
 .staff-schedule h6 {
     color: #D92B44;
-    padding: 5px 20px;
+    padding: 5px 15px;
+    width: 75%;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     background-color: #FFEDEF;
-    border-radius: 15px;
+    border-radius: 10px;
     flex-wrap: nowrap;
     position: absolute;
     top: -15px;
