@@ -425,7 +425,9 @@ nav p {
         width: calc(100% - 40px);
         background-color: #fcf9f4;
         z-index: 999;
-        transition: all 0.4s;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .3s linear;
     }
 
     nav#global__nav ul {
@@ -483,7 +485,8 @@ nav p {
         height: 100vh;
         /*表示する高さ*/
         overflow: auto;
-        transition: all 0.4s;
+        pointer-events: auto;
+        opacity: 1;
         -webkit-overflow-scrolling: touch;
     }
 
@@ -605,7 +608,7 @@ nav p {
     fill: #D92B44;
     stroke: #D92B44;
     stroke-width: .2px;
-    animation: svg-anime 3s ease-in;
+    animation: svg-anime 5s ease-in;
 }
 
 @keyframes svg-anime {
@@ -615,12 +618,12 @@ nav p {
         stroke-dashoffset: 1000px;
     }
 
-    90% {
+    40% {
         fill: transparent;
         stroke-dashoffset: 0;
     }
 
-    100% {
+    60% {
         fill: #D92B44;
     }
 }
@@ -1033,6 +1036,11 @@ img.about__textarea--img {
     bottom: 0;
 }
 
+img.fade-out {
+    opacity:0;
+    transition: all 1.3s 0s ease-out;
+}
+
 img.about__textarea--bg {
     width: 55rem;
     z-index: 1;
@@ -1140,6 +1148,8 @@ img.about__textarea--bg {
 .message {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    margin-right: 140px;
 }
 
 .about__text-content p.message {
@@ -1353,6 +1363,24 @@ img.about__textarea--bg {
     margin-left: -0.2em;
 }
 
+.staff-list__title span.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.3s 0s ease-out;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .staff-list__title p {
     line-height: 1.6;
     font-size: 0.8rem;
@@ -1450,9 +1478,8 @@ img.about__textarea--bg {
 
 .staff-list__button {
     text-align: center;
-    margin-top: -5px;
     z-index: 1;
-
+    margin-top: -12px;
 }
 
 .staff-list__button a {
@@ -1467,6 +1494,7 @@ img.about__textarea--bg {
     font-weight: 500;
     border-radius: 2px;
     letter-spacing: 0.05em;
+    margin: 0 auto;
 }
 
 .button_decoration::before, .button_decoration::after {
@@ -1536,6 +1564,7 @@ img.about__textarea--bg {
     letter-spacing: -0.15em;
     margin-right: 20px;
 }
+
 
 @media (max-width:768px) {
 

@@ -63,7 +63,39 @@ $('.slick-img').slick({
     dots: false,
     arrows: false,
 })
-  
+
+
+//写真をフェードイン
+$(function(){
+  $(window).on('load scroll', function() {
+     var winScroll = $(window).scrollTop();
+     var winHeight = $(window).height();
+     var scrollPos = winScroll + (winHeight * 0.8);
+
+     $(".fade-out").each(function() {
+        if($(this).offset().top < scrollPos) {
+           $(this).css({opacity: 1, transform: 'translate(0, 0)'});
+        }
+     });
+  });
+});
+
+
+//staff-list h2の文字をフェードアップ
+$(function(){
+  $(window).on('load scroll', function() {
+     var winScroll = $(window).scrollTop();
+     var winHeight = $(window).height();
+     var scrollPos = winScroll + (winHeight * 0.8);
+
+     $(".show").each(function() {
+        if($(this).offset().top < scrollPos) {
+           $(this).css({opacity: 1, transform: 'translate(0, 0)'});
+        }
+     });
+  });
+});
+
 
 // TOPへ戻る
 $(function () {
