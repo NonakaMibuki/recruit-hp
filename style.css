@@ -1528,6 +1528,7 @@ img.about__textarea--bg {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    object-fit: cover;
     margin: 0;
     padding: 0;
     z-index: -1;
@@ -1649,7 +1650,7 @@ img.about__textarea--bg {
     }
 
     .img__content {
-        height: 90vh;
+        height: 80vh;
     }
 
     .img__content--title {
