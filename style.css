@@ -341,8 +341,8 @@ nav p {
     }
 
     h1 a img {
-        width: 9rem;
-        margin-bottom: 7px;
+        width: 6rem;
+        margin-bottom: 5px;
     }
 
     h1 a span {
@@ -640,22 +640,22 @@ nav p {
     }
 }
 
-.logo-animation li.text-s svg {
+.logo-animation li.text-c svg {
     position: absolute;
     top: 11%;
     left: 9%;
-    width: 10rem;
+    width: 12rem;
 }
 
-.logo-animation li.text-h svg {
+.logo-animation li.text-o svg {
     position: absolute;
     top: 21%;
     left: 23%;
     z-index: 1;
-    width: 10rem;
+    width: 11.5rem;
 }
 
-.logo-animation li.text-o svg {
+.logo-animation li.text-m svg {
     position: absolute;
     top: 13%;
     left: 39%;
@@ -663,32 +663,32 @@ nav p {
     width: 11rem;
 }
 
-.logo-animation li.text-s02 svg {
+.logo-animation li.text-p svg {
     position: absolute;
-    top: 43%;
-    left: 42%;
-    width: 10.5rem;
+    top: 42%;
+    left: 41%;
+    width: 13rem;
 }
 
-.logo-animation li.text-h02 svg {
+.logo-animation li.text-a svg {
     position: absolute;
     top: 53%;
-    left: 57%;
-    width: 10rem;
-}
-
-.logo-animation li.text-i svg {
-    position: absolute;
-    top: 46%;
-    left: 69%;
-    width: 8rem;
+    left: 55%;
+    width: 12rem;
 }
 
 .logo-animation li.text-n svg {
     position: absolute;
+    top: 46%;
+    left: 68%;
+    width: 9rem;
+}
+
+.logo-animation li.text-y svg {
+    position: absolute;
     top: 40%;
     left: 83%;
-    width: 10rem;
+    width: 11.5rem;
 }
 
 .person01 {
@@ -731,7 +731,7 @@ nav p {
 .person06 {
     position: absolute;
     top: 30%;
-    left: 72%;
+    left: 74.5%;
 }
 
 .clip01 {
@@ -863,44 +863,44 @@ nav p {
 
 
 @media (max-width:768px) {
-    .logo-animation li.text-s svg {
-        width: 4.5rem;
+    .logo-animation li.text-c svg {
+        width: 5rem;
         left: 14%;
         top: 6.5%;
     }
 
-    .logo-animation li.text-h svg {
-        width: 4.5rem;
+    .logo-animation li.text-o svg {
+        width: 5rem;
         top: 9%;
         left: 39.5%;
     }
 
-    .logo-animation li.text-o svg {
-        width: 4.5rem;
+    .logo-animation li.text-m svg {
+        width: 4.7rem;
         top: 6.5%;
         left: 65%;
     }
 
-    .logo-animation li.text-s02 svg {
-        width: 4.5rem;
+    .logo-animation li.text-p svg {
+        width: 5.5rem;
         top: 34%;
         left: 7%;
     }
 
-    .logo-animation li.text-h02 svg {
-        width: 4.5rem;
+    .logo-animation li.text-a svg {
+        width: 5rem;
         top: 41%;
-        left: 33%;
-    }
-
-    .logo-animation li.text-i svg {
-        width: 3.5rem;
-        top: 37%;
-        left: 52%;
+        left: 25%;
     }
 
     .logo-animation li.text-n svg {
-        width: 4.5rem;
+        width: 4rem;
+        top: 37%;
+        left: 50%;
+    }
+
+    .logo-animation li.text-y svg {
+        width: 5.3rem;
         top: 31%;
         left: 77%;
     }
@@ -941,7 +941,7 @@ nav p {
 
     .person06 {
         width: 4.5rem !important;
-        left: 58.5%;
+        left: 59.5%;
         top: 28%;
     }
 
@@ -2186,8 +2186,8 @@ footer {
 }
 
 .footer-info img {
-    width: 15rem;
-    padding-bottom: 25px;
+    width: 11rem;
+    padding-bottom: 15px;
 }
 
 .footer-info p {
@@ -2274,6 +2274,10 @@ footer {
         text-align: left;
     }
 
+    .footer-info img {
+        width: 7rem;
+    }
+    
 }
 
 
@@ -2294,10 +2298,11 @@ h1.sub-page__logo {
 
 a.sub-page {
     flex-direction: column;
-    padding: 26px 50px;
+    padding: 10px 50px 20px;
 }
 
 a.sub-page img {
+    width: 9rem;
     margin-bottom: 10px;
 }
 
@@ -2315,7 +2320,7 @@ a.sub-page img {
     }
 
     a.sub-page img {
-        width: 9.5rem;
+        width: 6rem;
     }
 
     a.sub-page span {
@@ -2761,7 +2766,11 @@ a.sub-page img {
 }
 
 .schedule-detail li:nth-child(odd) {
-    margin-left: 39rem;
+    margin-left: 19.5rem;
+}
+
+.schedule-detail li.left-side {
+    margin-left: -19.5rem;
 }
 
 .schedule-detail li:nth-child(odd)::before, .schedule-detail li:nth-child(odd)::after {
@@ -2883,8 +2892,7 @@ a.sub-page img {
     }
 
     .schedule-detail {
-        display: block;
-        flex-direction: row;
+        flex-direction: column;
         padding: 20px 20px 0;
     }
 
@@ -2895,6 +2903,10 @@ a.sub-page img {
         text-align: center;
         z-index: 5;
         margin-bottom: 20px;
+    }
+
+    .schedule-detail li.left-side {
+        margin-left: 0;
     }
 
     .schedule-detail li::before, .schedule-detail li::after {
